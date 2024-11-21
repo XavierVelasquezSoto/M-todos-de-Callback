@@ -186,7 +186,7 @@ console.log(resultSameWordReverse);
 
 const fiveNumbersArray = numberTwoDigits => {
   const fiveNumbersArray = numberTwoDigits.map(number => {
-    return String(number).charAt(0) + String(number).charAt(1);
+    return Number(String(number).charAt(0)) + Number(String(number).charAt(1));
   });
   return fiveNumbersArray;
 };
@@ -229,11 +229,13 @@ const challenge = [
   }
 ];
 
-/* const aaaa = () => {
-  const aaaaFiltered = challenge.filter(user => {
-    return (user = '');
+const idUsers = idRemove => {
+  const idUsersFiltered = challenge.filter(user => {
+    return user.id !== idRemove;
   });
-  return aaaaFiltered;
+  return idUsersFiltered;
 };
 
-console.log(aaaa()); */
+console.log(idUsers("user001"));
+console.log(idUsers());
+
