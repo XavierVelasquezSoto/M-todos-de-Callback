@@ -75,8 +75,8 @@ tenNumbersCalculate([3, 7, 12, 15, 32, 22, 9, 50, 36, 73]);
 
 //7- Crea una función que reciba una palabra e imprima por consola esa palabra pero con las vocales en mayúscula.
 
+const vowels = 'aeiouáéíóú';
 const wordUpper = letters => {
-  const vowels = 'aeiouáéíóú';
   const wordUpperContainer = letters.split('').reduce((acc, letter) => {
     if (vowels.includes(letter)) {
       return acc + letter.toUpperCase();
